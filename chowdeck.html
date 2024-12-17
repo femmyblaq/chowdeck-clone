@@ -25,10 +25,15 @@
         box-sizing: border-box;
         font-family: "Plus Jakarta Sans", sans-serif;
     }
-
     body {
-        background-color: red;
+        background-image: url("Images/heroes.svg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        /* width: 100%; */
     }
+    
     header {
         display: flex;
         justify-content: space-between;
@@ -55,8 +60,8 @@
         list-style: none;
         display: flex;
         gap: 50px;
-        background-color: #ccc;
-        padding: 20px 35px;
+        background-color: #fff;
+        padding: 10px 35px;
         font-size: 1rem;
         border-radius: 30px;
         font-weight: 500;
@@ -66,49 +71,146 @@
         gap: 15px;
     }
     .right-side .customer {
+        width: 150px;
+        height: 40px !important;
         background-color: #fff;
-       padding: 15px; 
+       padding: 5px 15px; 
        border-radius: 50px;
        height: 50px;
        display: flex;
+       justify-content: center;
+       align-items: center;
        gap: 10px;
     }
     
     .right-side .customer div {
         border: 1px solid;
+        width: 20px;
+        height: 20px;
         border-radius: 50px;
         display: flex;
         align-items: center;
     }
     .right-side .cart {
         background-color: #fff;
-        padding: 15px;
+        /* padding: 15px; */
         border-radius: 50px;
-       height: 50px;
-
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .right-side .cart i {
         font-size: 1.3rem;
         color: rgb(37, 244, 47);
-        margin-top: 15px;
+        /* margin-top: 15px; */
     }
 
     .right-side .menu {
         display: none;
     }
-    body {
-        background-image: url("Images/heroes.svg");
-        height: 60vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        /* width: 100%; */
+    #Heroe {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        transform: translateY(-35%);
+        opacity: 0;
+        animation: FadeIn 2s ease-in forwards;
     }
-     /* #Heroe img {
-        width: 1000px;
-        height: 60vh;
-     } */
+    #Heroe h1 {
+        font-size: 5rem;
+        font-weight: 800;
 
+    }
+    #Heroe .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+     #Heroe button {
+        background-color: rgb(12 81 63);
+        color: #fff;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+     }
+     
+     #Heroe button img {
+        width: 20px;
+     }
+     #content {
+        height: 100vh;
+        display: flex;
+        justify-self: center;
+        padding: 40px 0;
+        border: 1px solid red;
+     }
+     #content .tab {
+        background-color: rgb(243, 243, 152);
+        border-radius: 50px;
+        width: 240px;
+        border: 1px solid green;
+        margin: auto;
+     }
+     #content .sub-content {
+        width: 50%;
+        border: 1px solid blue;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+     }
+     #content .sub-content .download button{
+        height: 40px;
+        width: 40px;
+        border: none;
+        background-color: rgb(12 81 63);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     #content  .download {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+     }
+
+     #content  .download button img {
+        width: 20px;
+     }
+
+     #content .tab button{
+        padding: 8px 10px;
+        background-color: rgb(243, 243, 152);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+     }
+     #content .chowdeck-app {
+        margin-top: 30px;
+     }
+     #content .chowdeck-app img {
+        width: 250px;
+     }
+
+    @keyframes FadeIn {
+        from {
+            opacity: 0;
+            margin-top: 80px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
     
     @media (max-width: 1020px) {
         header a {
@@ -170,7 +272,45 @@
 
     <!-- Section for Heroes  -->
      <section id="Heroe">
-        <!-- <img src="Images/heroes.svg" alt=""> -->
+        <h1>Have you eaten?</h1>
+        <div class="buttons">
+            <button>
+                <img src="Icons/google-play.png" alt="">
+                Download on google play
+            </button>
+            <button>
+                <img src="Icons/apple-logo.png" alt="">
+                Download on Apple store
+            </button>
+        </div>
+     </section>
+
+     <section id="content">
+        <div class="sub-content">
+            <div class="tab">
+                <button style="background-color: yellow;">Customers</button>
+                <button>Vendors</button>
+                <button>Riders</button>
+            </div>
+            <div style="margin-top: 30px;">
+                <h1>Try the App</h1>
+                <p>Have meals delivered to you within minutes from a wide variety 
+                    of restaurants ranging from 
+                    African to Continental cuisines to satisfy your cravings.</p>
+            </div>
+            <div class="download">
+                <button>
+                    <img src="Icons/google-play.png" alt="">
+                </button>
+                <button>
+                    <img src="Icons/apple-logo.png" alt="">
+                </button>
+            </div>
+
+            <div class="chowdeck-app">
+                <img src="Images/chowdeck-app.png" alt="">
+            </div>
+        </div>
      </section>
 </body>
 </html>
