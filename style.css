@@ -1,0 +1,280 @@
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    body {
+        background-image: url("Images/heroes.svg");
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        /* width: 100%; */
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 30px;
+    }
+
+    header a {
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+        background-color: rgb(12 81 63);
+        display: flex;
+        align-items: center;
+        border-radius: 100px;
+        width: 160px;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    header img {
+        width: 30px;
+    }
+
+    .nav-links ul {
+        list-style: none;
+        display: flex;
+        gap: 50px;
+        background-color: #fff;
+        padding: 10px 35px;
+        font-size: 1rem;
+        border-radius: 30px;
+        font-weight: 500;
+    }
+
+    .right-side {
+        display: flex;
+        gap: 15px;
+    }
+
+    .right-side .customer {
+        width: 150px;
+        height: 40px !important;
+        background-color: #fff;
+        padding: 5px 15px;
+        border-radius: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .right-side .customer div {
+        border: 1px solid;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .right-side .cart {
+        background-color: #fff;
+        /* padding: 15px; */
+        border-radius: 50px;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-side .cart i {
+        font-size: 1.3rem;
+        color: rgb(37, 244, 47);
+        /* margin-top: 15px; */
+    }
+
+    .right-side .menu {
+        display: none;
+    }
+
+    #Heroe {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        transform: translateY(-35%);
+        opacity: 0;
+        animation: FadeIn 2s ease-in forwards;
+    }
+
+    #Heroe h1 {
+        font-size: 5rem;
+        font-weight: 800;
+
+    }
+
+    #Heroe .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    #Heroe button {
+        background-color: rgb(12 81 63);
+        color: #fff;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #Heroe button img {
+        width: 20px;
+    }
+
+    #content {
+        height: 100;
+        display: flex;
+        justify-self: center;
+        padding: 40px 0;
+        border: 1px solid red;
+    }
+
+    #content .tab {
+        background-color: rgb(243, 243, 152);
+        border-radius: 50px;
+        width: 240px;
+        border: 1px solid green;
+        margin: auto;
+    }
+
+    #content .sub-content {
+        width: 50%;
+        border: 1px solid blue;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    #content .sub-content .download button {
+        height: 40px;
+        width: 40px;
+        border: none;
+        background-color: rgb(12 81 63);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content .download {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #content .download button img {
+        width: 20px;
+    }
+
+    #content .tab button {
+        padding: 8px 10px;
+        background-color: rgb(243, 243, 152);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    #content .chowdeck-app {
+        margin-top: 30px;
+    }
+
+    #content .chowdeck-app img {
+        width: 250px;
+    }
+
+    #insight h1 {
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: #ccc;
+        text-align: center;
+    }
+
+    #insight {
+        padding: 50px;
+    }
+
+    #insight .card-group {
+        display: flex;
+        gap: 20px;
+    }
+
+    #insight .card-group .card {
+        max-width: 350px;
+        min-width: 250px;
+        height: 420px;
+        border: 3px solid;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    #insight .card-group .card .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #insight .card-group .card .bottomImg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+    }
+
+    @keyframes FadeIn {
+        from {
+            opacity: 0;
+            margin-top: 80px;
+        }
+
+        to {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+
+    @media (max-width: 1020px) {
+        header a {
+            width: 50px;
+            height: 50px;
+        }
+
+        header a span {
+            display: none;
+        }
+
+        .nav-links,
+        .right-side .customer {
+            display: none;
+        }
+
+        .right-side .menu {
+            background-color: rgb(12 81 63);
+            padding: 15px;
+            border-radius: 50px;
+            height: 50px;
+            color: #fff;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }

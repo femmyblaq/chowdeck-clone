@@ -1,241 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="chowdeckLogo.ico" type="image/x-icon">
     <title>Chowdeck Logistics</title>
 
+    <!-- Css style file  -->
+     <link rel="stylesheet" href="style.css">
+
     <!-- RemixIcon cdn  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css"
+        integrity="sha512-T7lIYojLrqj7eBrV1NvUSZplDBi8mFyIEGFGdox8Bic92Col3GVrscbJkL37AJoDmF2iAh81fRpO4XZukI6kbA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Google fonts CDN  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Plus Jakarta Sans", sans-serif;
+    #review {
+        background-color: rgb(12 81 63);
+        height: 230vh;
+        margin: 50px 0;
     }
-    body {
-        background-image: url("Images/heroes.svg");
-        height: 100vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        /* width: 100%; */
+    #review .wrapper {
+        background-color: yellow;
+        width: 80%;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+        margin: auto;
+        margin-top: -30px;
     }
-    
-    header {
+    #review .wrapper h1 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+    #review .wrapper .navigations {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        padding: 25px 30px;
     }
-    a {
-        text-decoration: none;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #fff;
-        background-color: rgb(12 81 63);
+    #review .wrapper .navigations .timers, .direction {
         display: flex;
-        align-items: center;
-        border-radius: 100px;
-        width: 160px;
+        gap: 10px;
+    }
+    #review .wrapper .navigations .timers div {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        background-color: chocolate;
+        display: flex;
         justify-content: center;
-        padding: 5px 0;
+        align-items: center;
     }
-    header img {
-        width: 30px;
+    #review .wrapper .navigations .direction div {
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        background-color: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .nav-links ul {
-        list-style: none;
+    #review .chowdeck {
         display: flex;
         gap: 50px;
-        background-color: #fff;
-        padding: 10px 35px;
-        font-size: 1rem;
-        border-radius: 30px;
-        font-weight: 500;
+        width: 80%;
+        margin: 50px auto;
+        /* padding: 50px 100px; */
     }
-    .right-side {
-        display: flex;
-        gap: 15px;
-    }
-    .right-side .customer {
-        width: 150px;
-        height: 40px !important;
-        background-color: #fff;
-       padding: 5px 15px; 
-       border-radius: 50px;
-       height: 50px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       gap: 10px;
-    }
-    
-    .right-side .customer div {
-        border: 1px solid;
-        width: 20px;
-        height: 20px;
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-    }
-    .right-side .cart {
-        background-color: #fff;
-        /* padding: 15px; */
-        border-radius: 50px;
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .right-side .cart i {
-        font-size: 1.3rem;
-        color: rgb(37, 244, 47);
-        /* margin-top: 15px; */
-    }
-
-    .right-side .menu {
-        display: none;
-    }
-    #Heroe {
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 30px;
-        transform: translateY(-35%);
-        opacity: 0;
-        animation: FadeIn 2s ease-in forwards;
-    }
-    #Heroe h1 {
-        font-size: 5rem;
-        font-weight: 800;
-
-    }
-    #Heroe .buttons {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-    }
-     #Heroe button {
-        background-color: rgb(12 81 63);
+    #review .chowdeck h1 {
+        text-wrap: nowrap ;
+        font-size: 3rem;
+        font-weight: 900;
         color: #fff;
-        padding: 15px 20px;
-        border: none;
-        border-radius: 5px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-     }
-     
-     #Heroe button img {
-        width: 20px;
-     }
-     #content {
-        height: 100vh;
-        display: flex;
-        justify-self: center;
-        padding: 40px 0;
-        border: 1px solid red;
-     }
-     #content .tab {
-        background-color: rgb(243, 243, 152);
-        border-radius: 50px;
-        width: 240px;
-        border: 1px solid green;
-        margin: auto;
-     }
-     #content .sub-content {
-        width: 50%;
-        border: 1px solid blue;
-        text-align: center;
-        margin: 0 auto;
-        justify-content: center;
-     }
-     #content .sub-content .download button{
-        height: 40px;
-        width: 40px;
-        border: none;
-        background-color: rgb(12 81 63);
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-     }
-     #content  .download {
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-     }
-
-     #content  .download button img {
-        width: 20px;
-     }
-
-     #content .tab button{
-        padding: 8px 10px;
-        background-color: rgb(243, 243, 152);
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-     }
-     #content .chowdeck-app {
-        margin-top: 30px;
-     }
-     #content .chowdeck-app img {
-        width: 250px;
-     }
-
-    @keyframes FadeIn {
-        from {
-            opacity: 0;
-            margin-top: 80px;
-        }
-        to {
-            opacity: 1;
-            margin-top: 0;
-        }
+        margin: 0;
+        list-style: 0;
     }
-    
-    @media (max-width: 1020px) {
-        header a {
-            width: 50px;
+    #review .chowdeck img {
+        width: 120px;
+        height: 100px;
+        margin-top: -30px;
+    }
+    #review .chowdeck p {
+        font-size: 1.2rem;
+        color: #fff;
+    }
+    /* #review #marquee {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #review #marquee .container {
+        position: absolute;
+        width: 100%;
+        white-space: nowrap;
+        will-change: transform;
+        animation: moving 1s linear infinite;
+    }
+
+    @keyframes moving {
+        0% {
+            transform: translateX("10vw");
+        }
+        100% {
+            transform: translateX("-100%");
+        }
+    } */
+    #review .sliders{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            animation: marquee 25s linear infinite;
+        }
+        #review .sliders span{
+            border-style: solid;
+            border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-weight: 600;
+            padding: 10px 24px;
+            color: rgba(255, 255, 255, 1);
+            width: max-content;
             height: 50px;
+            display: flex;
+            align-items: center;
         }
-        header a span {
-            display: none;
+        #review .marquee {
+            overflow: hidden;
         }
-        .nav-links, .right-side .customer {
-            display: none;
+        
+        #review .marquee .sliders span{
+            display: flex;
+            gap: 8px;
+            text-wrap: nowrap;
         }
-        .right-side .menu {
-        background-color: rgb(12 81 63);
-        padding: 15px;
-        border-radius: 50px;
-        height: 50px;
-        color: #fff;
-        font-size: 1.4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        #review .marquee .sliders span img{
+            display: flex;
+            gap: 8px;
         }
-
-    }
+        #review .sliders span i{
+            color: rgb(241, 53, 241);
+        }
+        
+        #review .phones{
+            display: flex;
+            margin: 2rem;
+            padding: 2.2rem 0;
+            gap: 20px;
+            align-items: center;
+            animation: marquee 14s linear infinite;
+        }
+        @keyframes marquee{
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+        #review .phones img:nth-child(even){
+            margin-top: 3.8rem;
+        }
 </style>
 <body>
     <header>
@@ -243,7 +182,7 @@
             <img src="Icons/logo" alt="">
             <span>Chowdeck</span>
         </a>
-        
+
         <div class="nav-links">
             <ul>
                 <li>Relay</li>
@@ -271,7 +210,7 @@
     </header>
 
     <!-- Section for Heroes  -->
-     <section id="Heroe">
+    <section id="Heroe">
         <h1>Have you eaten?</h1>
         <div class="buttons">
             <button>
@@ -283,9 +222,9 @@
                 Download on Apple store
             </button>
         </div>
-     </section>
+    </section>
 
-     <section id="content">
+    <section id="content">
         <div class="sub-content">
             <div class="tab">
                 <button style="background-color: yellow;">Customers</button>
@@ -294,8 +233,8 @@
             </div>
             <div style="margin-top: 30px;">
                 <h1>Try the App</h1>
-                <p>Have meals delivered to you within minutes from a wide variety 
-                    of restaurants ranging from 
+                <p>Have meals delivered to you within minutes from a wide variety
+                    of restaurants ranging from
                     African to Continental cuisines to satisfy your cravings.</p>
             </div>
             <div class="download">
@@ -311,6 +250,260 @@
                 <img src="Images/chowdeck-app.png" alt="">
             </div>
         </div>
-     </section>
+    </section>
+
+    <section id="insight">
+        <h1>Join our growing network<i class="ri-arrow-down-line"></i></h1>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-content">
+                    <img width="30" src="Icons/icons8-sun-48.png" alt="">
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <img class="bottomImg" src="Images/image1" alt="">
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <img width="30" src="Icons/icons8-half-circle-48.png" alt="">
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <img class="bottomImg" src="Images/image3.webp" alt="">
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <i style="font-size: 2rem;" class="ri-shining-fill"></i>
+
+                    <!-- <img width="30" src="Icons/icons8-sun-48.png" alt=""> -->
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+                <img class="bottomImg" src="Images/image2.webp" alt="">
+            </div>
+        </div>
+
+        <!-- <i class="ri-shining-fill"></i> -->
+    </section>
+
+
+    <section id="review">
+        <div>
+            <div class="wrapper">
+                <h1>Explore Categories</h1>
+                <img src="Images/drink.svg" width="200" alt="">
+
+                <div class="navigations">
+                    <div class="timers">
+                        <div><i style="font-size: 1.7rem;" class="ri-map-pin-2-fill"></i></div>
+                        <div>01</div>
+                        <div>02</div>
+                        <div>03</div>
+                    
+                        <div>
+                             <i style="font-size: 1.7rem;" class="ri-shining-fill"></i></div>
+                    </div>
+                    <div class="direction">
+                        <div>
+                            <i style="color: #fff; font-size: 1rem;" class="ri-arrow-left-line"></i>
+                        </div>
+                        <div>
+                            <i style="color: #fff; font-size: 1rem;" class="ri-arrow-right-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chowdeck">
+                <div style="width: 50%;">
+                    <h1>Chowdeck has </h1>
+                    <div style="display: flex;">
+                        <h1>you covered 
+                        </h1>
+                        <img src="Images/meal.png" width="150" alt="">
+                    </div>
+                    
+                </div>
+                
+                <p>Hungry? Too tired to cook? 
+                   have friends over, or do you simply need to chop life?
+                   Download chowdeck, let's deliver happiness to your doorstep
+                   in minutes.
+                </p>
+            </div>
+
+            <!-- <div id="marquee">
+                <div class="container">
+                    <h1>Hello</h1>
+                </div>
+            </div> -->
+            <div class="marquee">
+                <div class="sliders">
+                    <span class="text1"><img width="30" src="Icons/icons8-sun-48.png" alt="Sun icon"> Quick and easy Onboarding</span>
+                    <span class="text1"><img width="30" src="Icons/icons8-half-circle-48.png" alt="Sun icon">Quality meal choices</span>
+                    <span class="text2"><i class="ri-shining-2-fill" style="font-size: 1.6rem;"></i>Live updates on Orders</span>
+                    <span class="text1"><i class="ri-map-pin-fill" style="font-size: 1.6rem; color: green;"></i>Highly rated drivers</span>
+                    <span class="text1"><img width="30" src="Icons/icons8-semi-circle-64.png" alt="Sun icon">20/7 support for customers and vendors</span>
+                    <span class="text1"><img width="30" src="Icons/icons8-sun-48.png" alt="Sun icon"> Quick and easy Onboarding</span>
+                    <span class="text1"><img width="30" src="Icons/icons8-semi-circle-64 (2).png" alt="Sun icon">Quality meal choices</span>
+                    <span class="text2"><i class="ri-shining-2-fill" style="font-size: 1.6rem;"></i>Live updates on Orders</span>
+                    <span class="text1"><i class="ri-map-pin-fill" style="font-size: 1.6rem; color: green;"></i>Highly rated drivers</span>
+                    <span class="text1"><img width="30" src="Icons/icons8-semi-circle-64.png" alt="Sun icon">20/7 support for customers and vendors</span>
+                </div>
+                <div class="phones">
+                    <img width="280" src="Images/order-arrived.png" alt="order-arrived">
+                    <img width="280" src="Images/accept-order.png" alt="accept-order">
+                    <img width="280" src="Images/pickup.png" alt="pickup">
+                    <img width="280" src="Images/order-transit.png" alt="order-transit">
+                    <img width="280" src="Images/order-arrived.png" alt="order-arrived">
+                    <img width="280" src="Images/accept-order.png" alt="accept-order">
+                    <img width="280" src="Images/pickup.png" alt="pickup">
+                    <img width="280" src="Images/order-transit.png" alt="order-transit">
+                    <img width="280" src="Images/order-arrived.png" alt="order-arrived">
+                    <img width="280" src="Images/accept-order.png" alt="accept-order">
+                    <img width="280" src="Images/pickup.png" alt="pickup">
+                    <img width="280" src="Images/order-transit.png" alt="order-transit">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="location">
+        <div class="container">
+            <div class="map">
+
+            </div>
+            <div class="restaurant">
+                <div class="top">
+                    <div class="bullet"></div>
+                    <h3>Restaurants</h3>
+                </div>
+                <div class="list">
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                    <div class="card">
+                        <p>Emmasweetbite - Ajah</p>
+                        <i style="color: green;" class="ri-shopping-cart-line"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        #location {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #location .container {
+            border: 4px solid;
+            border-radius: 20px;
+            height: 600px;
+            width: 80%;
+            display: flex;
+        }
+        #location .container .map {
+            border-right: 2px solid;
+            width: 60%;
+            height: 100%;
+        }
+        #location .container .restaurant {
+            border-left: 2px solid;
+            width: 40%;
+            height: 100%;
+            
+        }
+        #location .container .restaurant .top {
+            background-color: skyblue;
+            padding: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 4px solid;
+        }
+        #location .container .restaurant .bullet {
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            border: 3px solid;
+            background-color: orange;
+        }
+        #location .container .restaurant .list {
+            padding: 15px;
+            height: 88.5%;
+            overflow-y: scroll;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar {
+            width: 20px;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar-track {
+            background-color: #eeecec;
+            border-bottom-right-radius: 15px;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        #location .container .restaurant .list .card {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border: 2px solid #e1dfdf;
+            border-radius: 7px;
+            margin: 10px 0;
+        }
+    </style>
 </body>
+
 </html>
