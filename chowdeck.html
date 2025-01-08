@@ -175,6 +175,118 @@
         #review .phones img:nth-child(even){
             margin-top: 3.8rem;
         }
+
+        #location {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #location .container {
+            border: 4px solid;
+            border-radius: 20px;
+            height: 600px;
+            width: 80%;
+            display: flex;
+        }
+        #location .container .map {
+            border-right: 2px solid;
+            width: 60%;
+            height: 100%;
+        }
+        #location .container .restaurant {
+            border-left: 2px solid;
+            width: 40%;
+            height: 100%;
+            
+        }
+        #location .container .restaurant .top {
+            background-color: skyblue;
+            padding: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 4px solid;
+        }
+        #location .container .restaurant .bullet {
+            height: 12px;
+            width: 12px;
+            border-radius: 50px;
+            border: 3px solid;
+            background-color: orange;
+        }
+        #location .container .restaurant .list {
+            padding: 15px;
+            height: 88.5%;
+            overflow-y: scroll;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar {
+            width: 20px;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar-track {
+            background-color: #eeecec;
+            border-bottom-right-radius: 15px;
+        }
+        #location .container .restaurant .list::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 20px;
+        }
+        #location .container .restaurant .list .card {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border: 2px solid #e1dfdf;
+            border-radius: 7px;
+            margin: 10px 0;
+        }
+
+        #stories h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        font-weight: 900;
+    }
+
+    #stories {
+        padding: 50px;
+    }
+
+    #stories .card-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        place-items: center;
+        border: 2px solid greenyellow;
+        width: 100%;
+    }
+    
+    #stories .card-group .card {
+        width: 320px;
+        max-width: 350px;
+        min-width: 250px;
+        height: 420px;
+        border: 3px solid;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    #stories .card-group .card .card-content {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+    }
+
+    #stories .card-group .card .bottomImg {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
 </style>
 <body>
     <header>
@@ -438,72 +550,55 @@
             </div>
         </div>
     </section>
-    <style>
-        #location {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #location .container {
-            border: 4px solid;
-            border-radius: 20px;
-            height: 600px;
-            width: 80%;
-            display: flex;
-        }
-        #location .container .map {
-            border-right: 2px solid;
-            width: 60%;
-            height: 100%;
-        }
-        #location .container .restaurant {
-            border-left: 2px solid;
-            width: 40%;
-            height: 100%;
-            
-        }
-        #location .container .restaurant .top {
-            background-color: skyblue;
-            padding: 20px;
-            border-top-right-radius: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 4px solid;
-        }
-        #location .container .restaurant .bullet {
-            height: 12px;
-            width: 12px;
-            border-radius: 50px;
-            border: 3px solid;
-            background-color: orange;
-        }
-        #location .container .restaurant .list {
-            padding: 15px;
-            height: 88.5%;
-            overflow-y: scroll;
-        }
-        #location .container .restaurant .list::-webkit-scrollbar {
-            width: 20px;
-        }
-        #location .container .restaurant .list::-webkit-scrollbar-track {
-            background-color: #eeecec;
-            border-bottom-right-radius: 15px;
-        }
-        #location .container .restaurant .list::-webkit-scrollbar-thumb {
-            background-color: #fff;
-            border-radius: 20px;
-        }
-        #location .container .restaurant .list .card {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px;
-            border: 2px solid #e1dfdf;
-            border-radius: 7px;
-            margin: 10px 0;
-        }
-    </style>
+   
+
+    <section id="stories">
+        <div style="display: flex; align-items: center; margin-left: 20px;">
+            <h1>Stories</h1>
+        <img style="margin-bottom: 15px;" width="100" src="Images/Pasta.svg" alt="">
+        </div>
+        
+        <div class="card-group">
+            <div class="card">
+                <img class="bottomImg" src="Images/Chowpass_Thumbnail_ca55469a64.png" alt="">
+
+                <div class="card-content">
+                    <!-- <img width="30" src="Icons/icons8-sun-48.png" alt=""> -->
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+
+            </div>
+            <div class="card">
+                <img class="bottomImg" src="Images/Chowsmart_Thumbnail_4cddc9a55c.png" alt="">
+
+                <div class="card-content">
+                    <!-- <img width="30" src="Icons/icons8-half-circle-48.png" alt=""> -->
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+            <div class="card">
+                <img class="bottomImg" src="Images/CR_Exclusive_Thumbnail_92528979d5.png" alt="">
+
+                <div class="card-content">
+                    <!-- <i style="font-size: 2rem;" class="ri-shining-fill"></i> -->
+
+                    <!-- <img width="30" src="Icons/icons8-sun-48.png" alt=""> -->
+                    <h3>Start selling</h3>
+                    <p>Are you a restaurant owner looking to grow your business? Reach new customers when you join our
+                        network</p>
+                    <a href="">SEE MORE <i class="ri-arrow-right-line"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <i class="ri-shining-fill"></i> -->
+    </section>
 </body>
 
 </html>
