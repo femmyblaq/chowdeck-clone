@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to JS</h1>
+</body>
+<script>
+    var my_name = "HY";
+    var my_lname = "Devinton";
+    var prof = "Software Engineer";
+    // const age = 30
+    let Nationality = "Nigeria"
+    let isTall = true
+
+    // document.write("<h1>" + my_name + "<br> " + my_lname
+    // + " is a Faculty in Aptech" + 
+    // "and his profession is" + prof + ", he is " + age +"yrs" +
+    // " of age" +
+    //  "</h1>")
+
+    //  Assignment Operator 
+    // *
+    // /
+    // +
+    // -
+    // %
+    // **
+        // var x = prompt("Enter your first number: ")
+        // var y = prompt("Enter your second number: ")
+
+        // var add = Number(x) + parseInt(y)
+        // var mul = Number(x) * parseInt(y)
+        // x: 9
+        // y: 5
+        // add: 15
+        // mul: 
+    //     document.write("x: " + x + "<br>" + 
+    //                     "y: " + y + "<br>" +  
+    //                     "add: " + add)
+
+    //      alert("add: " + add + "\n" + "mul: " + mul )               
+
+    //  console.log(add);
+
+    /*Comparison Operator
+     == -> Equal to 
+     === -> Strict Equal to 
+     != -> Not Equal to 
+     > -> Greater than
+     < -> Lesser than
+     >= -> Greater Equal to
+     <= -> Lesser Equal to */
+
+    let a = 5
+    let b = "5"
+    console.log(a > b)
+    console.log(a >= b)
+    console.log(a < b)
+    console.log(a <= b)
+    console.log(a != b)
+    console.log(a == b)
+    console.log(a === b)
+
+    // Unary Operator
+    // ++ -> Increment
+    // -- -> Decrement
+    a++
+    b++
+    console.log(a, b)
+    
+    var age = 18
+    // Ternary Operator 
+        a > b ? console.log("a is greater than b") : console.log("a is not greater than")
+        age < 20 ? console.log("You are not allowed to go out!") :  console.log("You are allowed to go out!")
+
+
+    // Logical Operator 
+    // && -> AND 
+    // || -> OR
+    // ! -> NOT
+    var guest = prompt("Enter your name: ")
+    var ticketID = Number(prompt("Enter ticket ID:"))
+    
+    var exFirstLetter = guest.slice(0, 1).toUpperCase()
+    var remLetter = guest.slice(1, guest.length).toLowerCase()
+    var completeName = exFirstLetter + remLetter
+    console.log("My extracted letters: ", exFirstLetter)
+    console.log("My remaining letters: ", remLetter)
+    console.log("My complete letters: ", completeName)
+
+    
+    
+    // guest.toLowerCase()
+
+
+    var myGuest1 = "Ugo"
+    var myGuest2 = "Nicolas"
+    var myGuest3 = "Treasure"
+
+    completeName === myGuest1 && ticketID != '' || 
+    completeName === myGuest2 && ticketID != '' || 
+    completeName === myGuest3 && ticketID != '' ? 
+    console.log("You are permitted to join my show!") : 
+    console.log("Sorry, you are not part of the guest we expecting!!!") 
+
+    
+
+
+
+
+</script>
+</html>
