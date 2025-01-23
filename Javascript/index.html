@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Welcome to JS</h1>
 </body>
@@ -29,15 +31,15 @@
     // -
     // %
     // **
-        // var x = prompt("Enter your first number: ")
-        // var y = prompt("Enter your second number: ")
+    // var x = prompt("Enter your first number: ")
+    // var y = prompt("Enter your second number: ")
 
-        // var add = Number(x) + parseInt(y)
-        // var mul = Number(x) * parseInt(y)
-        // x: 9
-        // y: 5
-        // add: 15
-        // mul: 
+    // var add = Number(x) + parseInt(y)
+    // var mul = Number(x) * parseInt(y)
+    // x: 9
+    // y: 5
+    // add: 15
+    // mul: 
     //     document.write("x: " + x + "<br>" + 
     //                     "y: " + y + "<br>" +  
     //                     "add: " + add)
@@ -71,46 +73,179 @@
     a++
     b++
     console.log(a, b)
-    
+
     var age = 18
     // Ternary Operator 
-        a > b ? console.log("a is greater than b") : console.log("a is not greater than")
-        age < 20 ? console.log("You are not allowed to go out!") :  console.log("You are allowed to go out!")
+    a > b ? console.log("a is greater than b") : console.log("a is not greater than")
+    age < 20 ? console.log("You are not allowed to go out!") : console.log("You are allowed to go out!")
 
 
     // Logical Operator 
     // && -> AND 
     // || -> OR
     // ! -> NOT
-    var guest = prompt("Enter your name: ")
-    var ticketID = Number(prompt("Enter ticket ID:"))
-    
-    var exFirstLetter = guest.slice(0, 1).toUpperCase()
-    var remLetter = guest.slice(1, guest.length).toLowerCase()
-    var completeName = exFirstLetter + remLetter
-    console.log("My extracted letters: ", exFirstLetter)
-    console.log("My remaining letters: ", remLetter)
-    console.log("My complete letters: ", completeName)
+    // var guest = prompt("Enter your name: ")
+    // var ticketID = Number(prompt("Enter ticket ID:"))
 
-    
-    
+    // var exFirstLetter = guest.slice(0, 1).toUpperCase()
+    // var remLetter = guest.slice(1, guest.length).toLowerCase()
+    // var completeName = exFirstLetter + remLetter
+    // console.log("My extracted letters: ", exFirstLetter)
+    // console.log("My remaining letters: ", remLetter)
+    // console.log("My complete letters: ", completeName)
+
+
+
     // guest.toLowerCase()
 
 
-    var myGuest1 = "Ugo"
-    var myGuest2 = "Nicolas"
-    var myGuest3 = "Treasure"
+    // var myGuest1 = "Ugo"
+    // var myGuest2 = "Nicolas"
+    // var myGuest3 = "Treasure"
 
-    completeName === myGuest1 && ticketID != '' || 
-    completeName === myGuest2 && ticketID != '' || 
-    completeName === myGuest3 && ticketID != '' ? 
-    console.log("You are permitted to join my show!") : 
-    console.log("Sorry, you are not part of the guest we expecting!!!") 
+    // var ticketID1 = 44
+    // var ticketID2 = 50
+    // var ticketID3 = 99
 
-    
+    // completeName === myGuest1 && ticketID != '' ||
+    //     completeName === myGuest2 && ticketID != '' ||
+    //     completeName === myGuest3 && ticketID != '' ?
+    //     console.log("You are permitted to join my show!") :
+    //     console.log("Sorry, you are not part of the guest we expecting!!!")
+
+
+    // if (completeName === myGuest1 || 
+    //     completeName === myGuest2 || 
+    //     completeName === myGuest3) {
+    //     if (ticketID === ticketID1 || 
+    //     ticketID === ticketID2 || 
+    //     ticketID === ticketID2) {
+    //         alert("wlcome to our show!")
+    //         console.log("wlcome to our show!")
+
+    //     } else {
+    //         alert("Sorry we are not expecting you as our guest.")
+    //         console.log("Sorry we are not expecting you as our guest.")
+
+    //     }
+    // } else {
+    //     alert("Sorry we are not expecting you as our guest.")
+    //     console.log("Sorry we are not expecting you as our guest.")
+    // }
+
+    // const dayOfTheWeek = prompt("Enter days of the week: ")
+    // console.log(dayOfTheWeek)
+
+    // switch (dayOfTheWeek) {
+    //     case "M":
+    //         alert("That is the first day of the week!");
+    //         break;
+    //     case "Mon":
+    //         alert("That is the first day of the week!");
+    //         break;
+    //     case "1":
+    //         alert("That is the first day of the week!");
+    //         break;
+    //     case "T":
+    //         alert("That is the second day of the week!");
+    //         break;
+    //     default: ("The input you have entered does not match.")
+    // }
+
+    // let num = prompt("Enter a number:")
+
+    // For Loop Statement
+    // var x;
+    // for (x = 1; x <= num; x++) {
+    //     if (x % 2 === 0 && x % 3 === 0) {
+    //         document.write("<h1>" + "Hello World" + "<br>" + "</h1>")
+
+    //     } else if(x % 2 === 0) {
+    //         document.write("<h1>" + "Hello" + "<br>" + "</h1>")
+    //     }
+    //     else {
+    //         document.write("<h1>" + x + "<br>" + "</h1>")
+    //     }
+    //     console.log(x)
+    // }
+
+    const pin = 1015
+
+
+
+    //while loop 
+    var trial = 1;
+    let output
+    while (trial < 5) {
+        const enteredPin = +prompt("Enter your PIN: " + trial)
+        // switch (trial) {
+        //     case 1:
+        //         if (pin === enteredPin) {
+        //             alert("Welcome to your account")
+        //             trial--
+        //         }else {
+        //             alert("Incorrect PIN!!!")
+        //             trial++
+        //         }
+        //         break;
+        //     case 2:
+                
+        //         if (pin === enteredPin) {
+        //             alert("Welcome to your account")
+        //             break
+        //         }else {
+        //             alert("Incorrect PIN!!!")
+        //             trial++
+        //         }
+        //         break;
+        //     case 3:
+        //         if (pin === enteredPin) {
+        //             alert("Welcome to your account")
+        //             break
+        //         }else {
+        //             alert("Incorrect PIN!!!")
+        //             trial++
+        //         }
+        //         break;
+        //     case 4:
+        //         if (pin === enteredPin) {
+        //             alert("Welcome to your account")
+        //             break
+        //         }else {
+        //             alert("Sorry, try after 30 mins")
+        //             trial++
+        //         }
+        //         break;
+        //     default: alert("Sorry, try after 30 mins")
+
+        // }
+        
+        // document.write(output)
+        // trial++
+      
+        if (enteredPin === pin){
+            alert("Welcome to your acount!")
+            break;
+        }else {
+            trial++
+            alert("Access Denied")
+        }
+
+        if(trial === 5) {
+            alert("Tried too many times, please try again in 30mins")
+        }
+    }
+
+
+
+
+
+
+
 
 
 
 
 </script>
+
 </html>
