@@ -9,6 +9,7 @@
 
 <body>
     <h1>Welcome to JS</h1>
+    <h3></h3>
 </body>
 <script>
     var my_name = "HY";
@@ -174,67 +175,281 @@
 
 
     //while loop 
-    var trial = 1;
-    let output
-    while (trial < 5) {
-        const enteredPin = +prompt("Enter your PIN: " + trial)
-        // switch (trial) {
-        //     case 1:
-        //         if (pin === enteredPin) {
-        //             alert("Welcome to your account")
-        //             trial--
-        //         }else {
-        //             alert("Incorrect PIN!!!")
-        //             trial++
-        //         }
-        //         break;
-        //     case 2:
-                
-        //         if (pin === enteredPin) {
-        //             alert("Welcome to your account")
-        //             break
-        //         }else {
-        //             alert("Incorrect PIN!!!")
-        //             trial++
-        //         }
-        //         break;
-        //     case 3:
-        //         if (pin === enteredPin) {
-        //             alert("Welcome to your account")
-        //             break
-        //         }else {
-        //             alert("Incorrect PIN!!!")
-        //             trial++
-        //         }
-        //         break;
-        //     case 4:
-        //         if (pin === enteredPin) {
-        //             alert("Welcome to your account")
-        //             break
-        //         }else {
-        //             alert("Sorry, try after 30 mins")
-        //             trial++
-        //         }
-        //         break;
-        //     default: alert("Sorry, try after 30 mins")
+    // var trial = 1;
+    // let output
+    // while (trial < 5) {
+    //     const enteredPin = +prompt("Enter your PIN: " + trial)
+    //     // switch (trial) {
+    //     //     case 1:
+    //     //         if (pin === enteredPin) {
+    //     //             alert("Welcome to your account")
+    //     //             trial--
+    //     //         }else {
+    //     //             alert("Incorrect PIN!!!")
+    //     //             trial++
+    //     //         }
+    //     //         break;
+    //     //     case 2:
 
-        // }
-        
-        // document.write(output)
-        // trial++
-      
-        if (enteredPin === pin){
-            alert("Welcome to your acount!")
-            break;
-        }else {
-            trial++
-            alert("Access Denied")
-        }
+    //     //         if (pin === enteredPin) {
+    //     //             alert("Welcome to your account")
+    //     //             break
+    //     //         }else {
+    //     //             alert("Incorrect PIN!!!")
+    //     //             trial++
+    //     //         }
+    //     //         break;
+    //     //     case 3:
+    //     //         if (pin === enteredPin) {
+    //     //             alert("Welcome to your account")
+    //     //             break
+    //     //         }else {
+    //     //             alert("Incorrect PIN!!!")
+    //     //             trial++
+    //     //         }
+    //     //         break;
+    //     //     case 4:
+    //     //         if (pin === enteredPin) {
+    //     //             alert("Welcome to your account")
+    //     //             break
+    //     //         }else {
+    //     //             alert("Sorry, try after 30 mins")
+    //     //             trial++
+    //     //         }
+    //     //         break;
+    //     //     default: alert("Sorry, try after 30 mins")
 
-        if(trial === 5) {
-            alert("Tried too many times, please try again in 30mins")
-        }
+    //     // }
+
+    //     // document.write(output)
+    //     // trial++
+
+    //     if (enteredPin === pin){
+    //         alert("Welcome to your acount!")
+    //         break;
+    //     }else {
+    //         trial++
+    //         alert("Access Denied")
+    //     }
+
+    //     if(trial === 5) {
+    //         alert("Tried too many times, please try again in 30mins")
+    //     }
+    // }
+
+    var j = 1
+    do {
+        console.log("Hello there, I'm do while loop")
+
+    } while (j < 1)
+
+
+    //Array 
+    var cars = ["Bentley", "Maybach", "Rolls Royce", "Cyber Truck"]
+
+    var cars2 = ["Toyota", "Ferrari"]
+
+    cars.push("Mercedez")
+    cars.unshift("Lexus")
+    cars.pop()
+    cars.shift()
+
+    var car3 = cars.concat(cars2)
+
+    console.log(car3.length)
+
+
+
+
+    // while (car3.length < 10) {
+
+    //     var addCar = prompt("Enter car brand:")
+    //         car3.push(addCar)
+    // }
+
+    // for (x = 0; x < car3.length; x++) {
+    //     document.write(`<h1>${car3[x]}</h1>`)
+    // }
+
+    //Higher order array function
+
+    let ages = [16, 20, 31, 23, 25, 27];
+    //Map function
+    const agesBytwo = ages.map(age2 => age2 + 2)
+
+    console.log(agesBytwo)
+
+    //Filter
+    const lesser20 = ages.filter(a => a<20)
+
+    console.log(lesser20)
+
+    //Sort
+    const sortAge = ages.sort((a, b) => a - b)
+    console.log(sortAge)
+
+
+    //foreach
+    ages.forEach((a, index) => console.log(a, index))
+
+    
+    //some
+    let some = ages.some(a => a<=10)
+    console.log(some)
+
+    // Object 
+    const student = {
+        fName: "Nicholas",
+        lName: "Kolade",
+        Gender: "M",
+        email: "nicholas@gmail.com",
+        course: "ADSE",
+        resident: {
+            address: "Block 5, Zone D",
+            city: "Lagos",
+        },
+        skill: ["Photoshop design", "Videographer", "Social Manager"],
+        phone: "08120903045",
+        isActive: true
     }
+
+    const {fName, lName} = student
+    const [SocialManager] = student.skill
+
+    console.log(fName)
+    console.log(lName)
+    console.log(SocialManager)
+
+
+    console.log(student.fName)
+    console.log(student.resident.address)
+    console.log(student.skill[1])
+
+
+    // student.skill.forEach (sk => {
+    var sentence = `${student.lName, student.fName} is a 
+    student of Aptech currently studing ${student.course}, 
+    he already had some skills which are: ${student.skill}
+    `
+
+    console.log(sentence)
+    // })
+
+    //Function
+
+    function Hello (myName) {
+        document.write("<h1>Whatsup " + myName + "</h1>")
+    }
+    let Welcome = () => {
+        document.write("<h1>Welcome" + student.fName + "</h1>")
+    }
+    let h3 = document.querySelector("h3")
+    const add = () => {
+        return 5+6;
+    }
+
+    h3.innerHTML = add()
+
+    Hello("Pelumi")
+    Welcome()
+
+
+    //Assignment
+
+    // const books = [
+    //     {
+    //         bookTitle: "Sweet sixteen",
+    //         author: "Adegboyega Emmanuel",
+    //         year: 2018,
+    //         isAvailable: true
+    //     },
+    //     {
+    //         bookTitle: "Great expectation",
+    //         author: "Charles dickens",
+    //         year: 1946,
+    //         isAvailable: false
+    //     },
+    //     {
+    //         bookTitle: "48 Laws of power",
+    //         author: "Robert Green",
+    //         year: 2005,
+    //         isAvailable: true 
+    //     },
+    // ]
+
+    // const searchBook = prompt("Enter book title: ").toLowerCase().trim()
+
+    // const book = books.find(b => {
+    //    return b.bookTitle.toLowerCase() === searchBook && b.isAvailable
+    // })
+
+    // console.log(book)
+
+    // if(book) {
+    //    document.write(`<h1>${book.bookTitle} </br> ${book.author} </h1>`)
+    // }else {
+    //     document.write("Sorry the book you're searching for is not available...")
+
+    // }
+    
+    
+    // // books.forEach(book => {
+
+    // //     let title = book.bookTitle.toLowerCase()
+    // //     console.log(searchBook)
+    // //     console.log(title)
+    // //     if(searchBook === title   && book.isAvailable) {
+    // //         document.write(`<h1>${book.bookTitle} </br> ${book.author} </h1>`)
+    // //         return
+    // //     } 
+    // //     document.write("Sorry the book you're searching for is not available...")
+        
+    // // })
+
+
+    // const number1 = +prompt("Enter first number: ")
+    // const number2 = +prompt("Enter second number: ")
+    // const operator = prompt("Enter second operator: ")
+
+    // let result;
+    // const calculate = (a, b, o) => {
+    //     switch(o) {
+    //         case "+": result = a + b
+    //         break;
+    //         case "-": result = a - b
+    //         break;
+    //         case "*": result = a * b
+    //         break;
+    //         case "/": result = Math.round(a / b, 2)
+    //         break;
+    //         case "**": result = a ** b
+    //         break;
+    //         case "%": result = a % b
+    //         break;
+           
+    //     }
+
+    //     document.write("<h1>The result of the follow input is: " + result + "</h1>")
+    // }
+
+
+    // calculate(number1, number2, operator);
+    
+    // Math.max(number1, number2)
+       
+    // Math.min(number1, number2)
+       
+    // Math.abs(number1, number2)
+
+
+    //DOM Manipulation
+
+    
+
+
+
+
+
 
 
 

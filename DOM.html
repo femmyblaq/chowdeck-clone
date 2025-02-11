@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .myStyle {
+        background-color: rgb(3, 53, 114);
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hello {
+        border: 2px solid #f00;
+    }
+</style>
+
+<body>
+    <h1 class="hello"></h1>
+    <h1 class="hello"></h1>
+    <h1 class="hello">The journey has just begin!!</h1>
+    <h1 class="hello">The journey has just begin!!</h1>
+    <h1 class="hello">The journey has just begin!!</h1>
+    <h1 class="hello">The journey has just begin!!</h1>
+    <h1 class="hello">The journey has just begin!!</h1>
+    <button onclick="changeH1()">Click me</button>
+    <ul></ul>
+    <button onclick="addList()">Add list</button>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+<script>
+    let h1 = document.querySelectorAll("h1");
+    let ul = document.querySelector("ul")
+    console.log(h1)
+
+    var txtChange = true
+
+
+    h1[0].textContent = "Hello Peeps"
+    h1[1].textContent = "Hello Peeps"
+
+
+    function changeH1() {
+
+        if (txtChange) {
+            h1[0].textContent = "Welcome to javaScript"
+            h1[1].textContent = "Something else"
+            h1[0].classList.toggle("myStyle")
+            h1[1].classList.toggle("myStyle")
+            txtChange = false
+        } else if (!txtChange) {
+            txtChange = true
+            h1[0].textContent = "Hello Peeps"
+            h1[1].textContent = "Hello Peeps"
+            h1[0].classList.remove("myStyle")
+            h1[1].classList.remove("myStyle")
+        }
+
+        console.log(txtChange)
+    }
+
+    // h1.forEach((h, i) => {
+    //     switch (i) {
+    //         case 1:
+    //             function changeH1() {
+    //                 // alert("Hello")
+    //                 h1.textContent = "Welcome to javaScript"
+    //                 h1.classList.add("myStyle")
+
+    //             }
+
+    //     }
+    // })
+
+
+    function addList() {
+        let li = document.createElement("li")
+        li.textContent = "My plan is to finish JS in 2 days."
+        ul.appendChild(li)
+    }
+</script>
+
+</html>

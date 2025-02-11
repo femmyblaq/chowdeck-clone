@@ -27,288 +27,12 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+
+    <!-- JS Link  -->
+    <script defer src="chowdeck.js"></script>
 </head>
 
-<style>
-    #review {
-        background-color: rgb(12 81 63);
-        height: 230vh;
-        margin: 50px 0;
-    }
-
-    #review .wrapper {
-        background-color: yellow;
-        width: 80%;
-        text-align: center;
-        border-radius: 20px;
-        padding: 20px;
-        margin: auto;
-        margin-top: -30px;
-    }
-
-    #review .wrapper h1 {
-        font-size: 3rem;
-        font-weight: 800;
-    }
-
-    #review .wrapper .navigations {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #review .wrapper .navigations .timers,
-    .direction {
-        display: flex;
-        gap: 10px;
-    }
-
-    #review .wrapper .navigations .timers div {
-        height: 50px;
-        width: 50px;
-        border-radius: 50px;
-        background-color: chocolate;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #review .wrapper .navigations .direction div {
-        height: 50px;
-        width: 50px;
-        border-radius: 50px;
-        background-color: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #review .chowdeck {
-        display: flex;
-        gap: 50px;
-        width: 80%;
-        margin: 50px auto;
-        /* padding: 50px 100px; */
-    }
-
-    #review .chowdeck h1 {
-        text-wrap: nowrap;
-        font-size: 3rem;
-        font-weight: 900;
-        color: #fff;
-        margin: 0;
-        list-style: 0;
-    }
-
-    #review .chowdeck img {
-        width: 120px;
-        height: 100px;
-        margin-top: -30px;
-    }
-
-    #review .chowdeck p {
-        font-size: 1.2rem;
-        color: #fff;
-    }
-
-    /* #review #marquee {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-    #review #marquee .container {
-        position: absolute;
-        width: 100%;
-        white-space: nowrap;
-        will-change: transform;
-        animation: moving 1s linear infinite;
-    }
-
-    @keyframes moving {
-        0% {
-            transform: translateX("10vw");
-        }
-        100% {
-            transform: translateX("-100%");
-        }
-    } */
-    #review .sliders {
-        display: flex;
-        gap: 20px;
-        align-items: center;
-        animation: marquee 25s linear infinite;
-    }
-
-    #review .sliders span {
-        border-style: solid;
-        border-color: rgba(255, 255, 255, 0.1) rgba(255, 255, 255, 0.1);
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        font-weight: 600;
-        padding: 10px 24px;
-        color: rgba(255, 255, 255, 1);
-        width: max-content;
-        height: 50px;
-        display: flex;
-        align-items: center;
-    }
-
-    #review .marquee {
-        overflow: hidden;
-    }
-
-    #review .marquee .sliders span {
-        display: flex;
-        gap: 8px;
-        text-wrap: nowrap;
-    }
-
-    #review .marquee .sliders span img {
-        display: flex;
-        gap: 8px;
-    }
-
-    #review .sliders span i {
-        color: rgb(241, 53, 241);
-    }
-
-    #review .phones {
-        display: flex;
-        margin: 2rem;
-        padding: 2.2rem 0;
-        gap: 20px;
-        align-items: center;
-        animation: marquee 14s linear infinite;
-    }
-
-    @keyframes marquee {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translate3d(-100%, 0, 0);
-        }
-    }
-
-    #review .phones img:nth-child(even) {
-        margin-top: 3.8rem;
-    }
-
-    #location {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #location .container {
-        border: 4px solid;
-        border-radius: 20px;
-        height: 600px;
-        width: 80%;
-        display: flex;
-    }
-
-    #location .container .map {
-        border-right: 2px solid;
-        width: 60%;
-        height: 100%;
-    }
-
-    #location .container .restaurant {
-        border-left: 2px solid;
-        width: 40%;
-        height: 100%;
-
-    }
-
-    #location .container .restaurant .top {
-        background-color: skyblue;
-        padding: 20px;
-        border-top-right-radius: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        border-bottom: 4px solid;
-    }
-
-    #location .container .restaurant .bullet {
-        height: 12px;
-        width: 12px;
-        border-radius: 50px;
-        border: 3px solid;
-        background-color: orange;
-    }
-
-    #location .container .restaurant .list {
-        padding: 15px;
-        height: 88.5%;
-        overflow-y: scroll;
-    }
-
-    #location .container .restaurant .list::-webkit-scrollbar {
-        width: 20px;
-    }
-
-    #location .container .restaurant .list::-webkit-scrollbar-track {
-        background-color: #eeecec;
-        border-bottom-right-radius: 15px;
-    }
-
-    #location .container .restaurant .list::-webkit-scrollbar-thumb {
-        background-color: #fff;
-        border-radius: 20px;
-    }
-
-    #location .container .restaurant .list .card {
-        display: flex;
-        justify-content: space-between;
-        padding: 15px;
-        border: 2px solid #e1dfdf;
-        border-radius: 7px;
-        margin: 10px 0;
-    }
-
-    #stories h1 {
-        font-size: 4rem;
-        margin-bottom: 30px;
-        font-weight: 900;
-    }
-
-    #stories {
-        padding: 50px;
-        margin: 50px 0 150px 0;
-
-    }
-
-    #stories .card-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 10px;
-        place-items: center;
-        width: 100%;
-    }
-
-    #stories .card-group .card {
-        width: 320px;
-        max-width: 350px;
-        min-width: 250px;
-        height: 420px;
-        border: 3px solid;
-        border-radius: 15px;
-        position: relative;
-        text-align: center;
-    }
-
-    #stories .card-group .card .bottomImg {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-    }
-</style>
 
 <body>
     <header>
@@ -632,165 +356,6 @@
 
         <!-- <i class="ri-shining-fill"></i> -->
     </section>
-    <style>
-        #faq {
-            height: 60vh;
-            display: flex;
-            justify-content: center;
-            background-color: #000;
-            position: relative;
-            margin-top: 50px;
-        }
-
-        #faq .faq-container {
-            width: 80%;
-            height: 80vh;
-            border: 4px solid;
-            border-radius: 10px;
-            background-color: #fff;
-            position: absolute;
-            top: -80px;
-            display: flex;
-            /* gap: 20px; */
-        }
-
-        #faq .faq-container .questions,
-        .faq-container .answers {
-            width: 50%;
-            padding: 30px;
-            overflow: hidden;
-            height: 90%;
-        }
-
-        #faq .faq-container .questions h1,
-        .faq-container .answers h1 {
-            font-size: 3.5rem;
-            font-weight: 900;
-            color: #0c513f;
-        }
-
-        #faq .faq-container .questions ul {
-            list-style: none;
-            margin-top: 40px;
-        }
-
-        #faq .faq-container .questions li {
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 5px;
-            margin: 10px 0;
-            border: 3px solid #eeecec;
-            font-weight: 700;
-            color: #0c513f;
-        }
-
-        #faq .faq-container .questions li.active {
-            background-color: #000;
-            color: #fff;
-        }
-
-        #faq .faq-container .answers .box {
-            padding: 20px;
-            background-color: orange;
-            border-radius: 15px;
-            margin-top: 40px;
-            height: 80%;
-        }
-
-        #footer {
-            height: 200vh;
-            background-color: #000;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        #footer .container {
-            width: 80%;
-            display: flex;
-            margin: 0 auto;
-            gap: 20px;
-        }
-
-        #footer .container .place-order {
-            background-color: #0c513f;
-            border-radius: 15px;
-            width: 50%;
-            height: 700px;
-        }
-
-        #footer .container img {
-            width: 50%;
-            height: 700px;
-        }
-
-        #footer .footer-grid {
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 60px;
-        }
-
-        #footer .coolstuff {
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 2px solid #9e9d9d;
-        }
-
-        #footer .coolstuff h1,
-        #footer .coolstuff i {
-            color: #fff;
-            font-size: 2rem;
-        }
-
-        #footer .coolstuff div {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        #footer .coolstuff p {
-            color: rgb(246, 213, 168);
-        }
-
-        #footer .coolstuff img {
-            margin-bottom: -10px;
-        }
-        #footer form {
-            display: flex;
-            height: 90px;
-        }
-        #footer form input {
-            height: 100%;
-            width: 80%;
-            background-color: #000;
-            border-top: none;
-            border-left: none;
-        }
-        #footer form input::placeholder {
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
-        #footer form button {
-            height: 100%;
-            width: 20%;
-            font-size: 4rem;
-            background-color: #000;
-            color: blueviolet;
-            border: none;
-            border-bottom: 2px solid #9e9d9d;
-        }
-        #footer .footer-links {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        #footer .footer-links div {
-            border: 2px solid red;
-            padding: 50px;
-        }
-    </style>
     <section id="faq">
         <div class="faq-container">
             <div class="questions">
@@ -848,15 +413,28 @@
             </div>
             <div class="answers">
                 <h1>Ans.</h1>
-                <div class="box">
+                <div class="box" style="background-color: aqua;">
                     <img width="30" src="Icons/icons8-sunIII-48.png" alt="">
 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi beatae officiis eveniet.
+                    <p class="activeAns">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quasi beatae officiis eveniet.
                         Ab illo placeat accusantium itaque quis? Deserunt quos sed nam quasi necessitatibus corporis?
                         Alias est, perspiciatis deleniti debitis aliquam illo corrupti a omnis harum nesciunt voluptate
                         error cum veniam. Eaque magni laborum ratione corrupti saepe ea ipsam!</p>
+                    <p>Hello Batch 877</p>
+                    <p>Hello Javascript</p>
+                    <p>The journey has been superb.</p>
+                    <p>Onto the next.🚀</p>
+                    
                 </div>
             </div>
+            <style>
+                .answers p {
+                    display: none;
+                }
+                .activeAns {
+                    display: block !important;
+                }
+            </style>
         </div>
     </section>
 
@@ -972,4 +550,5 @@
         </div>
     </section>
 </body>
+
 </html>
